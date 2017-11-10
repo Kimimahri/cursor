@@ -24,13 +24,13 @@ public class TestTask {
         driver.manage().window().maximize();
     }
 
-    @Parameters({"url"})
+    @Parameters({"url", "username", "password"})
     @Test
-    private void cursorTest(String url) {
+    private void cursorTest(String url, String username, String password) {
         SubmitPage submitPage = new SubmitPage(driver);
         MainPage mainPage = new MainPage(driver);
 
-        submitPage.submit();
+        submitPage.signin(username, password);
         driver.get(url);
         mainPage.placeCursorOnSubmenu();
         Assert.assertTrue(mainPage.subMenuIsVisible());

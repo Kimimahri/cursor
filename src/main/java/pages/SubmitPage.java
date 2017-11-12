@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class SubmitPage {
-
     private By buttonSignin = By.linkText("Signin");
     private By inputSigninUsername = By.xpath("//form[@class='ajaxlogin']//input[@name='username']");
     private By inputSigninPassword = By.xpath("//form[@class='ajaxlogin']//input[@name='password']");
